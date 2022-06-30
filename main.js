@@ -132,4 +132,17 @@ posts.forEach((element) => {
             </div>
         </div>`;
     wrapperElements.append(newElement);
+
+});
+
+const likeButtons = document.querySelectorAll(`.like-button`);
+const likeCounters = document.querySelectorAll(`.js-likes-counter`);
+
+
+likeButtons.forEach((element, index) => {
+   // console.log(element, index);
+    element.addEventListener(`click`, function(){
+       console.log(posts[index]); 
+       element.classList.add(`like-button--liked`)
+    })
 });
